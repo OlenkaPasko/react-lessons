@@ -1,13 +1,14 @@
 
-
-export default function OfficerProfile() {
-    return (
-      <div>
-        <p>Name:Jacob Mercer</p>
-        <p>Rank:Commander</p>
-        <p>Age:42</p>
-        <p>Spec:Fighter Pilot</p>
-        <p>Status:Active</p>
-      </div>
-    );
+//глибока деструктр.
+export default function OfficerProfile({ officer:{name,rank,age,spec,status} }) {
+  //console.log(props);
+  return (
+    <div>
+      <p>Name:Jacob Mercer{name}</p>
+      <p>Rank:Commander{rank}</p>
+      <p>Age:{age}</p>
+      <p>Spec:Fighter Pilot{spec}</p>
+      <p>Status:Active{status}</p>
+    </div>
+  );
 }
