@@ -1,0 +1,11 @@
+/*Тут пишуться стилі лише для штмл розмітки поточного компоненту,наприклад тільки для Хедеру. 
+Не для лого,юзернейм ітд.*/
+
+.app-header{
+display: flex;
+justify-content: space-between;
+border-bottom: 1px solid #2a2a2a;
+margin-bottom: 20px;
+}
+
+
