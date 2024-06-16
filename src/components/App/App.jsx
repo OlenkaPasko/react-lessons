@@ -1,26 +1,10 @@
 import AppBar from "../AppBar/AppBar";
-import OfficerProfile from "../OfficerProfile/Officerprofile";
 import officers from "../../components/officers.json";
+import OfficerList from "../OfficerList/OfficerList";
+
+//json файл імпортувати тільки в App.jsx
 //console.log(officers);
 
-//const firstPilot = {
- // id: 1,
- // name: "Jacob Mercer",
-  //rank: "Commander",
-  //age: 42,
- // spec: "Fighter Pilot",
-  //skills: ["Combat Maneuvers", "Navigation", "Strategic Planning"],
-  //status: "Active",
-//};
-//const secondPilot = {
-  //id: 2,
-  //name: "Adrian Cross",
-  //rank: "Lieutenant",
-  //age: 35,
-  //spec: "Reconnaissance",
-  //skills: ["Stealth Operations", "Surveillance", "Data Analysis"],
-  //status: "Active",
-//};
 //const isModalOpen = true;
 export default function App() {
   return (
@@ -38,11 +22,7 @@ export default function App() {
           <li key={index}>{item}</li>
         ))}
       </ul>
-      <ul>
-        {officers.map((officer) => <li key={officer.id}>
-          <OfficerProfile officer={officer}/>
-        </li>)}
-      </ul>
+      <OfficerList items={officers} />
     </div>
   );
 }
