@@ -5,7 +5,7 @@ export default function OfficerList({ items }) {
     <ul>
       {items.map((item) => (
         <li key={item.id}>
-          <OfficerProfile officer={items} />
+          <OfficerProfile officer={item} />
         </li>
       ))}
     </ul>
