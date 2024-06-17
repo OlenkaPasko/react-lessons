@@ -1,8 +1,9 @@
-import "./UserMenu.css"
+import css from "./UserMenu.module.css"
+
 export default function UserMenu() {
   return (
-    <div className="user-menu">
-      <span>Hello username</span>
+    <div className={css.userMenu} >
+      <span className={css.userName}>Hello username</span>
       <button>log out</button>
     </div>
   );

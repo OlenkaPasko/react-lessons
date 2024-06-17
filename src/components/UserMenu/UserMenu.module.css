@@ -1,0 +1,11 @@
+.userMenu {
+    display: flex;
+    gap: 4px;
+}
+.userName {
+font-size: 20px;
+color: brown;
+}
+.container {
+    color: aqua;
+}

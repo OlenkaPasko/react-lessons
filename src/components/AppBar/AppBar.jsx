@@ -1,11 +1,11 @@
 import Logo from "../Logo/Logo";
 import UserMenu from "../UserMenu/UserMenu";
 
-import "./AppBar.css"
+import css from "./AppBar.module.css"
 
 export default function AppBar() {
   return (
-    <header className="app-header">
+    <header className={css.appHeader}>
       <Logo />
       <UserMenu />
     </header>
