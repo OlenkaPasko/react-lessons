@@ -1,20 +1,27 @@
 //глибока деструктр.
 //для кожного map key обов'язково
-import css from "./OfficerProfile.module.css"
+import clsx from "clsx";
+import css from "./OfficerProfile.module.css";
+
 
 export default function OfficerProfile({
-  officer: { name, rank, age, spec, status, skills },
+  officer: { name, rank, age, spec, active, skills },
 }) {
   //console.log(props);
+  //const statusClasses = clsx(css.text, active ? css.isActive : css.isRetired);
+  const containerClsx = clsx(
+    css.container,
+    active ? css.isActive : css.isRetired
+  );
   return (
-    <div className={css.container}>
+    <div className={containerClsx}>
       <p className={css.text}>Name:{name}</p>
       <p className={css.text}>Rank:{rank}</p>
       <p className={css.text}>Age:{age}</p>
       <p className={css.text}>Spec:{spec}</p>
-      <p className={css.text}>Status:{status === "Active" ? "Is active" : "Is retaired"}</p>
+      <p className={css.text}>Status:{active ? "Active" : "Retired"}</p>
       <ul>
-        {skills.map((skill,index) => (
+        {skills.map((skill, index) => (
           <li key={index}>{skill}</li>
         ))}
       </ul>
