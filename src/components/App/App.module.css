@@ -1,0 +1,12 @@
+.contaier {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+/*display: block; для того,щоб не було 4пкс додаткови як в інлайнових стилях*/
+.myIcon{
+    display: block;
+color: chocolate;
+width: 40px;
+height: 40px;
+}
