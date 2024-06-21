@@ -2,12 +2,12 @@
 //import AppBar from "../AppBar/AppBar";
 //import officers from "../../components/officers.json";
 //import OfficerList from "../OfficerList/OfficerList";
-
+import articles from "../../articles.json"
 
 import Reader from "../Reader/Reader.jsx"
 
 export default function App() {
-  return <Reader />;
+  return (<Reader items={articles} />);
 }
 
 
