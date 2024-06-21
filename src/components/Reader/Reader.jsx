@@ -10,9 +10,13 @@ export default function Reader({ items }) {
   const hendeleNext = () => {
     setIdx(idx + 1);
   };
-
+//якщо заходить менше одного -, або більше 10
+  
+  const isFirst = idx === 0;
+  const isLast = idx === items.length - 1; 
   //отримання поточного елементу
   const currentArticle = items[idx];
+  //console.log(currentArticle);
   return (
     <div className={css.container}>
       <header className={css.header}>
