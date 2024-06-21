@@ -2,12 +2,21 @@
 //import AppBar from "../AppBar/AppBar";
 //import officers from "../../components/officers.json";
 //import OfficerList from "../OfficerList/OfficerList";
-import articles from "../../articles.json"
+//import articles from "../../articles.json";
+import css from "./App.module.css";
+//import Reader from "../Reader/Reader.jsx";
+import ClickTraker from "../ClickTraker/ClickTraker";
 
-import Reader from "../Reader/Reader.jsx"
 
 export default function App() {
-  return (<Reader items={articles} />);
+  return <div className={css.container}>
+    <h1>Effects in React</h1>
+    <ClickTraker/>
+  </div>;
+  
+  {
+    /*<Reader items={articles} />;*/
+  }
 }
 
 

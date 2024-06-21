@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Progress from "../Progress/Progress";
+//import Progress from "../Progress/Progress";
 import css from "./Reader.module.css";
 
 export default function Reader({ items }) {
@@ -21,7 +21,6 @@ export default function Reader({ items }) {
   return (
     <div className={css.container}>
       <header className={css.header}>
-        <h1>R</h1>
         <div>
           <button onClick={hendlePrev} disabled={isFirst}>
             Prev
