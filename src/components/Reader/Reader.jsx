@@ -18,7 +18,7 @@ export default function Reader({ items }) {
   const hendeleNext = () => {
     setIdx(idx + 1);
   };
-  //функція ініціалізатор стану useEffect
+  //функція ініціалізатор стану useEffect,яка читає localStorage і повертає початкове значення для стану
   useEffect(() => {
     localStorage.setItem("artcl-idx", idx);
   }, [idx]);
@@ -50,3 +50,7 @@ export default function Reader({ items }) {
     </div>
   );
 }
+//щоб записати в локалсторидж:
+//1.Оголосити стан
+//2.В useEffect записати локалсторидж
+//3.Створити функцію ініціалізатор
