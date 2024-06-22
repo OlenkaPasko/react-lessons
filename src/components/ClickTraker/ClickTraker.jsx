@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+//функція ініціалізатор стану. спочатку виконується getInitialClicks, потімuseState і все інше
 const getInitialClicks = () => {
   const savedClicks = localStorage.getItem("num-of-clicks");
   return savedClicks !== null ? JSON.parse(savedClicks) : 0;
@@ -12,7 +12,7 @@ export default function ClickTraker() {
   //JSON.stringify()якщо об'єкт чи масив обов'язково,тобто складний тип даних
   //за допомогою ефекту можна записувати будь які значення в локалсторидж
   useEffect(() => {
-    localStorage.setItem("num-of-clics", /*JSON.stringify()*/ clicks);
+    localStorage.setItem("num-of-clicks", /*JSON.stringify()*/ clicks);
   }, [clicks]);
 
   useEffect(() => {
