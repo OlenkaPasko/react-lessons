@@ -1,8 +1,19 @@
 import { useState, useEffect } from "react";
 
+const getInitialClicks = () => {
+  const savedClicks = localStorage.getItem("num-of-clicks");
+  return savedClicks !== null ? JSON.parse(savedClicks) : 0;
+};
+
 export default function ClickTraker() {
-  const [clicks, setClicks] = useState(0);
+  //до const [clicks, setClicks] додали функцію до монтування компонента,спочатку поставили useState(0);, потім в останню чергу дописали нову функцію, для запам'ятовування чиселв локалсторидж.
+  const [clicks, setClicks] = useState(getInitialClicks);
   const [date, setDate] = useState(Date.now());
+  //JSON.stringify()якщо об'єкт чи масив обов'язково,тобто складний тип даних
+  //за допомогою ефекту можна записувати будь які значення в локалсторидж
+  useEffect(() => {
+    localStorage.setItem("num-of-clics", /*JSON.stringify()*/ clicks);
+  }, [clicks]);
 
   useEffect(() => {
     console.log("effect");
@@ -11,8 +22,13 @@ export default function ClickTraker() {
     //він спрацює тільки на монтування компонента
   }, []);
   useEffect(() => {
-    console.log("Number of clicks:", clicks);
-  }, [clicks]);
+    console.log("current date:", date);
+    document.title = date;
+  }, [date]);
+
+  //useEffect(() => {
+  //console.log("Number of clicks:", clicks);
+  //}, [clicks]);
   //всі залежності ефекта мають бути в масиві залежностей [clicks] олин раз пусті дужки[] для монтування, потім дужки заповнюються еффектами[clicks]ті які потрібно при будь якій кількості
   return (
     <div>

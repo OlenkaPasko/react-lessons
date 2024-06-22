@@ -19,7 +19,7 @@ export default function App() {
       <h1>Effects in React</h1>
       <button onClick={togle}>{isOpen ? "Unmont" : "Mount"}</button>
       {isOpen && <Timer/>}
-      {/*<ClickTraker/>*/}
+      <ClickTraker/>
     </div>
   );
 

@@ -7,7 +7,7 @@ export default function Timer() {
     const intervalId = setInterval(() => {
       console.log(Date.now());
     }, 1000);
-      //функція очищення, для ремувЕдвенліснерів,деаніціалізації бібліотек,
+      //функція очищення, для ремувЕдвенліснерів,деаніціалізації бібліотек,очищати http запити
     return function cleanup() {
         console.log("cleanup");
         clearInterval(intervalId);
